@@ -1,0 +1,25 @@
+.color-bar {
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  left: 20px;
+  .color-item {
+    display: flex;
+  }
+  .number {
+    padding-left: 4px;
+    > span {
+      display: inline-block;
+      color: rgba(0, 0, 0, 0.6);
+      min-width: 25px;
+    }
+    .min {
+      text-align: right;
+      margin-right: 4px;
+    }
+    .max {
+      text-align: left;
+      margin-left: 4px;
+    }
+  }
+}
