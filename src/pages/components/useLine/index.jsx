@@ -7,15 +7,16 @@ import lineSvg from './line.svg';
 function UseLine(scene) {
   const [line, setLine] = useState(null)
 
-
   useEffect(() => {
     if (!scene) {
       return
     }
+    /** 线上面的箭头 */
     scene.addImage(
       'plane',
       lineSvg
     );
+
     const layer = new LineLayer({
       zIndex: 20
     })
@@ -31,7 +32,7 @@ function UseLine(scene) {
       .size('lin_size', (lin_size) => lin_size)
       // .shape('arc3d')
       .shape('arc')
-      .color('#FF7C6A')
+      .color('#FF7C6A') // 线颜色
       .animate({
         interval: 2,
         trailLength: 2,
@@ -43,6 +44,7 @@ function UseLine(scene) {
         targetColor: '#f00', // 终点颜色
       });
 
+    /** 终点圈圈动画 */
     const dotPoint = new PointLayer({
       zIndex: 21
     })

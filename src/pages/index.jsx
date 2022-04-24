@@ -16,7 +16,7 @@ export default function IndexPage() {
   const cityColor = useCityColor(scene)
   /** 渲染线 */
   const lin = useLine(scene)
-  console.log(lin)
+
 
 
   return (

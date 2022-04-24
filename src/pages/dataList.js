@@ -42,12 +42,16 @@ export const colorData = [
   },
 ];
 
+/** 渲染线的数据 */
 export const lineData = [
   {
+    /**起始点经纬度 */
     from_lon: 116.25,
     from_lat: 40,
+    /**终点经纬度 */
     to_lon: 117.200983,
     to_lat: 39.084158,
+    /** 线的大小 */
     lin_size: 20,
   },
 ];
