@@ -18,7 +18,8 @@ function UseLine(scene) {
     );
 
     const layer = new LineLayer({
-      zIndex: 20
+      zIndex: 20,
+      blend: 'normal'
     })
       .source(lineData, {
         parser: {
@@ -30,8 +31,8 @@ function UseLine(scene) {
         }
       })
       .size('lin_size', (lin_size) => lin_size)
-      // .shape('arc3d')
-      .shape('arc')
+      .shape('arc3d')
+      // .shape('arc')
       .color('#FF7C6A') // 线颜色
       .animate({
         interval: 2,
@@ -94,7 +95,7 @@ function UseLine(scene) {
 
     scene.addLayer(dotPoint);
     scene.addLayer(layer);
-    scene.addLayer(flyLine);
+    // scene.addLayer(flyLine);
 
     setLine(layer)
   }, [scene])

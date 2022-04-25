@@ -11,6 +11,7 @@ const useScene = () => {
   useEffect(() => {
     const scene = new Scene({
       id: 'map',
+      logoVisible: false,
       map: new Mapbox({
         pitch: 40, //
         style: 'blank',
